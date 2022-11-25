@@ -6,12 +6,9 @@ const PORT = process.env.PORT;
 const express = require("express");
 const app2=express();
 
-// app2.get("/",(req,res)=>{
-//     res.send("Hello");
-// })
-// app2.listen(3000, ()=>{
-//     console.log('listening on 3000')
-// })
+app.get("/",(req,res)=>{
+    res.send("Go To /api/v1/ routes to access backend")
+})
 app.listen(PORT, () => {
     console.log(`listening on port ${PORT}`)
 });
