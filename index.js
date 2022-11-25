@@ -6,15 +6,15 @@ const PORT = process.env.PORT;
 const express = require("express");
 const app2=express();
 
-app2.get("/",(req,res)=>{
-    res.send("Hello");
-})
-app2.listen(3000, ()=>{
-    console.log('listening on 3000')
-})
-// app.listen(PORT, () => {
-//     console.log(`listening on port ${PORT}`)
-// });
+// app2.get("/",(req,res)=>{
+//     res.send("Hello");
+// })
+// app2.listen(3000, ()=>{
+//     console.log('listening on 3000')
+// })
+app.listen(PORT, () => {
+    console.log(`listening on port ${PORT}`)
+});
 cloudinary.config({
     cloud_name:process.env.CLOUDINARY_NAME,
     api_key:process.env.CLOUDINARY_API_KEY,
