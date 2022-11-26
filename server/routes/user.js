@@ -14,7 +14,7 @@ router
 
 router
   .route("/logout")
-   .get(logout);
+   .post(logout);
 
 router
   .route("/updatePassword")
