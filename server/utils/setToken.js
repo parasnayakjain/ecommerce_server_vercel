@@ -7,7 +7,7 @@ const options = {
     sameSite: 'None',
     secure: true
   };
- // console.log(options);
+  console.log(options);
  res.status(200).cookie("id" , `${user._id}`,options).json({
   status:"True",
   user
