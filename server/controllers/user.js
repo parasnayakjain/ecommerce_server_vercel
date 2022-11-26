@@ -57,7 +57,7 @@ const logout = func((async (req, res, next) => {
         secure: true,
         overwrite: true
     };
-    res.cookie("id", null, options).status(200).json({
+    res.status(200).cookie("id", "kuchBHi", options).json({
         success: true,
         message: "Logged Out",
     });
