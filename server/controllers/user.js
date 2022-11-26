@@ -49,16 +49,15 @@ const login = func((async (req, res, next) => {
 }))
 
 const logout = func((async (req, res, next) => {
-    console.log("LOgging out ....");
-    res.cookie("id", null, {
-        expires: new Date(Date.now()),
+    console.log("Logging out ....");
+    const options={
+        expires: new Date(Date.now()+1),
         httpOnly: true,
         sameSite: 'None',
         secure: true,
         overwrite: true
-    });
-
-    res.status(200).json({
+    };
+    res.cookie("id", null, options).status(200).json({
         success: true,
         message: "Logged Out",
     });
