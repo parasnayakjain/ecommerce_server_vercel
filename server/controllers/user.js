@@ -49,6 +49,7 @@ const login = func((async (req, res, next) => {
 }))
 
 const logout = func((async (req, res, next) => {
+    console.log("LOgging out ....");
     res.cookie("id", null, {
         expires: new Date(Date.now()),
         httpOnly: true,
